@@ -19,17 +19,15 @@ object RealTimeRandomQuery {
     val conn: Connection = DriverManager.getConnection("jdbc:mysql://60.190.133.139:3306/VTTD", "root", "mBnkvj2HKjvnxHES8rqXH")
     val stat: Statement = conn.createStatement()
 
-    while (true){
+    while (true) {
       val rs: ResultSet = stat.executeQuery(" SELECT CUSTOMNAME from CUSTOM")
-      while (rs.next()){
+      while (rs.next()) {
         val name = rs.getString("CUSTOMNAME")
         println(name)
       }
 
       Thread.sleep(5000)
     }
-
-
 
 
   }
