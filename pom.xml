@@ -8,7 +8,54 @@
     <artifactId>git-test</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <scala.version>2.11.12</scala.version>
+        <hadoop.version>hadoop-2.6.0-cdh5.16.1</hadoop.version>
+        <spark.version>2.4.4</spark.version>
+        <rabbitmq.version>3.6.5</rabbitmq.version>
+        <hbase.version>1.2.0</hbase.version>
+    </properties>
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.apache.spark</groupId>-->
+        <!--<artifactId>spark-streaming-kafka-0-10_2.11</artifactId>-->
+        <!--<version>${spark.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.70</version>
+        </dependency>
+
+        <!--引入RabbitMQ依赖 -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>${rabbitmq.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
