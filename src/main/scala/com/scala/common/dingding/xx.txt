@@ -1,0 +1,1 @@
+curl 'https://oapi.dingtalk.com/robot/send?access_token=f1cfe7e766ba954d471af232e5fe06f6a72ade3080c61e7a625ea0add0895300'  -H 'Content-Type: application/json'  -d '{"msgtype": "text","text": {"content":"我就是我, 是不一样的烟火"}}'
