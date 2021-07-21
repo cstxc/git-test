@@ -15,6 +15,9 @@ import org.apache.flink.streaming.api.scala._
 object StreamingWordCount {
   def main(args: Array[String]): Unit = {
     val ev = StreamExecutionEnvironment.getExecutionEnvironment
+//    ev.setParallelism(2)
+//    ev.setRuntimeMode(2)
+
 
     val ds: DataStream[String] = ev.socketTextStream("localhost", 7777)
 
@@ -27,5 +30,6 @@ object StreamingWordCount {
     rs.print()
 
     ev.execute()
+
   }
 }
